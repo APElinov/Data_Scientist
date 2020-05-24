@@ -1,5 +1,11 @@
-numbers = int(input('Сколько граней у кубиков? '))
+a = int(input())
+b = int(input())
 
-for i in range(1, numbers + 1):
-    for k in range(1, numbers + 1):
-        print('-'.join([str(i), str(k)]))
+while a != 0 and b != 0:
+    if a > b:
+        a %= b
+    else:
+        b %= a
+
+gcd = a + b
+print(gcd)
